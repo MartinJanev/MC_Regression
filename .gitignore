@@ -85,3 +85,5 @@ venv.bak/
 .ropeproject
 outputs/idata/
 /outputs/idata/
+/a.py
+/all_code_dump.txt

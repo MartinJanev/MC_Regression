@@ -25,18 +25,18 @@ def main():
     idata = to_inferencedata(mcmc)
 
     # Save posterior
-    os.makedirs("outputs/idata", exist_ok=True)
-    idata.to_netcdf("outputs/idata/posterior.nc")
+    os.makedirs("../outputs1/idata", exist_ok=True)
+    idata.to_netcdf("outputs1/idata/posterior.nc")
 
     # Plots requiring only posterior
-    os.makedirs("outputs/figures", exist_ok=True)
-    plot_trace(idata, "outputs/figures/trace.png")
-    plot_forest_coefficients(idata, features, "outputs/figures/forest_coeffs.png")
+    os.makedirs("../outputs1/figures", exist_ok=True)
+    plot_trace(idata, "../outputs1/figures/trace.png")
+    plot_forest_coefficients(idata, features, "../outputs1/figures/forest_coeffs.png")
 
     # Posterior summary
-    save_posterior_summary(idata, "outputs/summary.csv")
+    save_posterior_summary(idata, "outputs1/summary.csv")
 
-    print("Training complete. Posterior saved to outputs/idata/posterior.nc")
+    print("Training complete. Posterior saved to outputs1/idata/posterior.nc")
 
 if __name__ == "__main__":
     main()

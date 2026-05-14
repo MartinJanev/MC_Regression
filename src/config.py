@@ -16,8 +16,8 @@ class TrainConfig:
 
     # NUTS / MCMC
     chains: int = 4 # number of parallel chains
-    draws: int = 2000 # number of samples to draw
-    tune: int = 500 # number of warmup (tuning) steps per chain
+    draws: int = 10000 # number of samples to draw
+    tune: int = 200 # number of warmup (tuning) steps per chain
 
 @dataclass
 class EvalConfig:
@@ -33,4 +33,4 @@ class EvalConfig:
     seed: int = 123
 
     # Posterior predictive sampling
-    draws: int = 1000
+    draws: int = 5000
